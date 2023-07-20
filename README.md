@@ -2,6 +2,7 @@
 ## Protection
 #### Create Protection Group
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-groups
+
 Body:
 ```
 {
@@ -32,6 +33,7 @@ Response:
 ```
 #### Get all protection groups data
 GET /disaster-recovery/v1beta1/virtual-continuous-protection-groups
+
 Response:
 ```
 {
@@ -77,6 +79,7 @@ Response:
 ```
 #### Get data for specific protection group
 GET /disaster-recovery/v1beta1/virtual-continuous-protection-groups/{id}
+
 Response:
 ```
 {
@@ -115,14 +118,16 @@ Response:
 ```
 #### Refresh protection group data from ZVM
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-groups/refresh/
+
 Response:
 ```
 {
     "taskUri": "/api/v1/tasks/e977ed03-ece3-4ed0-839b-a993725d4c4c"
 }
 ```
-Update VPG
+#### Update VPG
 PUT /disaster-recovery/v1beta1/virtual-continuous-protection-groups/{vpgId}
+
 Body:
 ```
 {
@@ -138,6 +143,7 @@ Response:
 
 #### Delete a protection group 
 DELETE /disaster-recovery/v1beta1/virtual-continuous-protection-groups/{{DSCC_VPG_UDID}}
+
 Response:
 ```
 {
@@ -147,6 +153,7 @@ Response:
 ## VIRTUALIZATION 
 #### Get list of Virtual-machines for a specific Protection site ID 
 GET /api/temp/zerto-virtual-machines?siteId={siteId}
+
 Response:
 ```
 [
@@ -420,6 +427,7 @@ Response:
 ```
 #### Get data for specific recovery group
 GET /disaster-recovery/v1beta1/virtual-continuous-protection-recovery/{{DSCC_VPG_UDID}}
+
 Response:
 ```
    {
@@ -476,6 +484,7 @@ Response:
 ```
 #### Initiate Failover Live-Commit  Operation 
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/:DsccVpgId/FailoverCommit
+
 Response:
 ```
 {
@@ -484,6 +493,7 @@ Response:
 ```
 #### Initiate Failover Live-Rollback Operation 
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/:DsccVpgId/FailoverRollback
+
 Response:
 ```
 {
@@ -492,6 +502,7 @@ Response:
 ```
 #### Initiate Failover Test Operation
  POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/{{VpgId}}/FailoverTest
+
 Response:
 ```
 {
@@ -500,6 +511,7 @@ Response:
 ```
 #### Initiate Failover Test-Stop Operation 
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/{{VpgId}}/FailoverTestStop
+
 Response:
 ```
 {
@@ -509,6 +521,7 @@ Response:
 ## REPLICATION
 #### Get all replication groups data
 GET /disaster-recovery/v1beta1/virtual-continuous-protection-replicas/
+
 Response:
 ```
 {
@@ -542,6 +555,7 @@ Response:
 ```
 #### Get data for specific replication group
 GET /disaster-recovery/v1beta1/virtual-continuous-protection-replicas/{{DSCC_VPG_UDID}}
+
 Response:
 ```
 {
@@ -568,6 +582,7 @@ Response:
 ```
 #### Get checkpoints for specific replica VPG
 GET /disaster-recovery/v1beta1/virtual-continuous-protection-replicas/:vpgid/checkpoints
+
 Response:
 ```
 {
@@ -588,6 +603,7 @@ Response:
 ```
 #### Refresh checkpoint data for specific vpg
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-replicas/:vpgid/checkpoints/refresh
+
 Response:
 ```
 {
