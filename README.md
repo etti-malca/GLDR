@@ -186,6 +186,7 @@ Response:
 ```
 #### Get a list of Hypervisor-host
 GET /api/temp/zerto-hypervisor-hosts?siteId={siteId}
+
 Response:
 ```
 [
@@ -207,6 +208,7 @@ Response:
 ```
 #### Recovery site ID as param recovery site Refresh Hypervisor-host list 
 POST /api/temp/zerto-hypervisor-hosts/refresh
+
 Body:
 ```
 {
@@ -221,6 +223,7 @@ Response:
 ```
 #### Get a list of Hypervisor-clusters
 GET /api/temp/zerto-hypervisor-clusters?siteId={siteId}
+
 Response:
 ```
 [
@@ -237,6 +240,7 @@ Response:
 ```
 #### Recovery site ID as param recovery site Refresh Hypervisor-cluster list
  POST /api/temp/zerto-hypervisor-clusters/refresh
+ 
 Body:
 ```
 {
@@ -251,6 +255,7 @@ Response:
 ```
 #### Get a list of hypervisor-datastores
 GET /api/temp/zerto-hypervisor-datastores?siteId={siteId}
+
 ```
 [
     {
@@ -266,6 +271,7 @@ GET /api/temp/zerto-hypervisor-datastores?siteId={siteId}
 ```
 #### Recovery site ID as param recovery site Refresh hypervisor-datastores list 
 POST /api/temp/zerto-hypervisor-datastores/refresh
+
 Body:
 ```
 {
@@ -280,6 +286,7 @@ Response:
 ```
 #### Get a list of hypervisor-networks
 GET /api/temp/zerto-hypervisor-networks?siteId={siteId}
+
 Response:
 ```
 [
@@ -296,6 +303,7 @@ Response:
 ```
 #### Recovery site ID as param recovery siteRefresh hypervisor-networks list 
 POST /api/temp/zerto-hypervisor-networks/refresh
+
 Body: 
 ```
 {
@@ -310,6 +318,7 @@ Response:
 ```
 #### Get a list of hypervisor-folders
 GET /api/temp/zerto-hypervisor-folders?siteId={siteId}
+
 Response:
 ```
 [
@@ -326,6 +335,7 @@ Response:
 ```
 #### Recovery site ID as param recovery siteRefresh hypervisor-folders list 
 POST /api/temp/zerto-hypervisor-folders/refresh
+
 Bosy:
 ```
 {
@@ -340,6 +350,7 @@ Response:
 ```
 #### Get a list of hypervisor-datastore-clusters
 GET /api/temp/zerto-hypervisor-datastore-clusters?siteId={siteId}
+
 Response:
 ```
 [
@@ -356,6 +367,7 @@ Response:
 ```
 #### Recovery site ID as param recovery siteRefresh hypervisor-datastore-clusters list 
 POST /api/temp/zerto-hypervisor-datastore-clusters/refresh
+
 Body:
 ```
 {
@@ -372,6 +384,7 @@ Response:
 
 #### Get all recovery groups data
 GET /disaster-recovery/v1beta1/virtual-continuous-protection-recovery/
+
 Response:
 ```
 {
@@ -476,6 +489,7 @@ Response:
 ```
 #### Initiate Failover Live Operation 
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recovery/{{DSCC_VPG_UDID}}/Failover
+
 Response:
 ```
 {
@@ -612,6 +626,7 @@ Response:
 ```
 #### Refresh replication data from ZVM
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-replicas/refresh
+
 Body:
 ```
 {    "recoverySiteId": "8c15b12c-818f-498a-bcb3-573088bc285b"}
@@ -624,7 +639,9 @@ Response:
 ```
 ## SITES
 #### Gets list of sites connected to DSCC
-GET /disaster-recovery/v1beta1/virtual-sitesResponse:
+GET /disaster-recovery/v1beta1/virtual-sites
+
+Response:
 ```
 {
     "items": [
@@ -652,6 +669,7 @@ GET /disaster-recovery/v1beta1/virtual-sitesResponse:
 ```
 #### Gets specific sites information 
 GET {{url}}/disaster-recovery/v1beta1/virtual-sites/{id}
+
 Response:   
 ```
 {
@@ -673,6 +691,7 @@ Response:   
 ```
 #### Add Site to DSCC
 POST /disaster-recovery/v1beta1/virtual-sites
+
 Body:
 ```
 {
@@ -687,6 +706,7 @@ Response:
 ```
 #### Refresh site
 POST /disaster-recovery/v1beta1/virtual-sites/{id}/refresh
+
 Response:
 ```
 {
@@ -695,6 +715,7 @@ Response:
 ```
 #### Delete a site from DSCC
 DELETE /disaster-recovery/v1beta1/virtual-sites/{id}
+
 Response: 
 204 No Content
 
@@ -702,6 +723,7 @@ Response:
 ## REPORTS
 #### post 
 POST /disaster-recovery/{{}}/virtual-continuous-protection-reports/
+
 Body:
 ```
 {
@@ -716,12 +738,14 @@ Body:
 ```
 #### Get
 GET /disaster-recovery/{{}}/virtual-continuous-protection-reports
+
 Response:
 ```
 
 ```
 #### Get 
 GET /disaster-recovery/{{}}//virtual-continuous-protection-reports/:repID
+
 Response:
 ```
 
