@@ -164,6 +164,7 @@ Response:
 ```
 #### Protection site ID as param Refresh virtual machines list 
 POST /api/temp/zerto-virtual-machines/refresh
+
 Body:
 ```
 {
