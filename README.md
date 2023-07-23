@@ -722,31 +722,62 @@ Response:
 
 ## REPORTS
 #### post 
-POST /disaster-recovery/{{}}/virtual-continuous-protection-reports/
-
-Body:
+POST /disaster-recovery/api/v1/virtual-continuous-protection-reports - with 
+Body : 
 ```
 {
+
 "siteId":"{{dsccSiteId}}",
+
 "reportType":"recovery",
+
 "startDate":"2022-11-05T11:04:05Z",
+
 "endDate":"2023-09-20T15:04:05Z",
+
 "recoveryOperation":["FailoverTest","Failover"],
+
 "protectionGroup":["{{wrkVPGID}}"],
+
 "state":""
+
 }
 ```
-#### Get
-GET /disaster-recovery/{{}}/virtual-continuous-protection-reports
+ 
 
-Response:
+Response : Status 202 Accepted - body :
 ```
+{
+
+    "taskUri": "/api/v1/tasks/76730514-af9e-4913-b3f2-75db02e1988f"
+
+}
+```
+ 
+#### Get
+GET /disaster-recovery/api/v1/virtual-continuous-protection-reports
+
+
+Response : status 200 OK - body :
+```
+[
+
+    {
+
+        "id": "02243f39-2b1c-4f8d-b040-556789bbb198",
+
+        "timeCreated": "2023-06-01T05:52:50.739817Z",
+
+        "downloaded": false
+
+    }
+]
 
 ```
 #### Get 
-GET /disaster-recovery/{{}}//virtual-continuous-protection-reports/:repID
+GET /disaster-recovery/api/v1/virtual-continuous-protection-reports/:repID
 
 Response:
 ```
-
+<FILE>
 ```
