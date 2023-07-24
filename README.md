@@ -82,7 +82,7 @@ Response:
 204 No Content
 
 ## VIRTUALIZATION 
-#### Get list of Virtual-machines for a specific Protection site ID 
+#### Get list of Virtual-machines for a specific Protection site ID (all or per siteId)
 GET /api/temp/zerto-virtual-machines?siteId={siteId}
 
 Response:
@@ -143,7 +143,7 @@ Response:
     "taskUri": "/api/v1/tasks/01955825-26e1-4130-aae3-2677d465e577"
 }
 ```
-#### Get a list of Hypervisor-host
+#### Get a list of Hypervisor-host (all or per siteId)
 GET /api/temp/zerto-hypervisor-hosts?siteId={siteId}
 
 Response:
@@ -190,7 +190,7 @@ Response:
     "taskUri": "/api/v1/tasks/e977ed03-ece3-4ed0-839b-a993725d4c4c"
 }
 ```
-#### Get a list of Hypervisor-clusters
+#### Get a list of Hypervisor-clusters (all or per siteId)
 GET /api/temp/zerto-hypervisor-clusters?siteId={siteId}
 
 Response:
@@ -271,7 +271,7 @@ Response:
     "taskUri": "/api/v1/tasks/e5d2d1f7-f3c6-44cf-92f1-a2854b40dba7"
 }
 ```
-#### Get a list of hypervisor-datastores
+#### Get a list of hypervisor-datastores (all or per siteId)
 GET /api/temp/zerto-hypervisor-datastores?siteId={siteId}
 
 ```
@@ -303,7 +303,7 @@ Response:
     "taskUri": "/api/v1/tasks/3a02bf03-ebf7-42c7-81d6-656d28863730"
 }
 ```
-#### Get a list of hypervisor-networks
+#### Get a list of hypervisor-networks (all or per siteId)
 GET /api/temp/zerto-hypervisor-networks?siteId={siteId}
 
 Response:
@@ -335,7 +335,7 @@ Response:
     "taskUri": "/api/v1/tasks/a360908d-c407-45fb-9dee-6818b0d98c88"
 }
 ```
-#### Get a list of hypervisor-folders
+#### Get a list of hypervisor-folders (all or per siteId)
 GET /api/temp/zerto-hypervisor-folders?siteId={siteId}
 
 Response:
@@ -367,7 +367,7 @@ Response:
     "taskUri": "/api/v1/tasks/31f8dd6c-a924-4098-b4cb-a5d668bd51c1"
 }
 ```
-#### Get a list of hypervisor-datastore-clusters
+#### Get a list of hypervisor-datastore-clusters (all or per siteId)
 GET /api/temp/zerto-hypervisor-datastore-clusters?siteId={siteId}
 
 Response:
