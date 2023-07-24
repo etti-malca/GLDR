@@ -520,11 +520,7 @@ Response:
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-groups/refresh/
 
 Response:
-```
-{
-    "taskUri": "/api/v1/tasks/e977ed03-ece3-4ed0-839b-a993725d4c4c"
-}
-```
+202 Accepted
 #### Update VPG
 PUT /disaster-recovery/v1beta1/virtual-continuous-protection-groups/{vpgId}
 
