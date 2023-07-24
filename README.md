@@ -632,22 +632,44 @@ GET /disaster-recovery/v1beta1/virtual-continuous-protection-replicas/:vpgid/che
 
 Response:
 ```
+Replications : Get checkpoints for specific replica VPG - response should be : 
+
 {
-            "id": "67701",
+
+    "items": [
+        {
+
+            "id": "31",
+
             "tag": "",
-            "timestamp": "2023-07-23T07:59:56Z",
-            "customerId": "fe0d3faa-ae9f-11ec-a437-ea9dc4f11500"
- }
+
+            "timestamp": "2023-07-24T10:41:43Z",
+
+            "customerId": "26ddc1fa-2016-11ee-974b-eaee3c8a2752"
+
+        }
+    ],
+
+    "limit": 20000,
+
+    "offset": 0,
+
+    "total": 30,
+
+    "createdAt": "2023-07-24T10:41:47.126752Z",
+
+    "updatedAt": "2023-07-24T10:41:47.126752Z",
+
+    "refreshedAt": "2023-07-24T10:41:47.126752Z"
+
+}
 ```
 #### Refresh checkpoint data for specific vpg
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-replicas/:vpgid/checkpoints/refresh
 
 Response:
-```
-{
-    "taskUri": "/api/v1/tasks/0ea06a97-41d6-4b68-8eec-fc753de4eae7"
-}
-```
+202 Accepted
+
 #### Refresh replication data from ZVM
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-replicas/refresh
 
@@ -670,49 +692,106 @@ GET /disaster-recovery/v1beta1/virtual-continuous-protection-recovery/
 Response:
 ```
  {
-            "id": "008a2f3c-e868-4454-8d23-41c0a5d961b0",
-            "name": "S4EGS3_v1",
+
+    "items": [
+
+        {
+
+            "id": "505e224a-18ff-46ba-9ab3-562b5f8f2232",
+
+            "name": "hjr6uy5u6",
+
             "type": "virtual-continuous-protection-recovery",
+
             "status": "READY",
-            "customerId": "fe0d3faa-ae9f-11ec-a437-ea9dc4f11500",
+
+            "customerId": "26ddc1fa-2016-11ee-974b-eaee3c8a2752",
+
             "actions": [
+
                 {
+
                     "name": "test",
+
                     "enabled": true,
+
                     "reason": ""
+
                 },
+
                 {
+
                     "name": "stop",
+
                     "enabled": false,
+
                     "reason": ""
+
                 },
+
                 {
+
                     "name": "failover",
+
                     "enabled": true,
+
                     "reason": ""
+
                 },
+
                 {
+
                     "name": "move",
+
                     "enabled": false,
+
                     "reason": ""
+
                 },
+
                 {
+
                     "name": "rollback",
+
                     "enabled": false,
+
                     "reason": ""
+
                 },
+
                 {
+
                     "name": "commit",
+
                     "enabled": false,
+
                     "reason": ""
+
                 }
+
             ],
-            "resourceUri": "/disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/008a2f3c-e868-4454-8d23-41c0a5d961b0",
-            "createdAt": "2023-07-19T08:26:03.190703Z",
-            "updatedAt": "2023-07-19T11:51:53.787729Z",
-            "generation": 9,
+
+            "resourceUri": "/disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/505e224a-18ff-46ba-9ab3-562b5f8f2232",
+
+            "createdAt": "2023-07-24T10:39:09.141799Z",
+
+            "updatedAt": "2023-07-24T10:39:09.141799Z",
+
+            "generation": 1,
+
             "lastTestedAt": ""
+
         }
+
+    ],
+
+    "limit": 20000,
+
+    "offset": 0,
+
+    "total": 1
+
+}
 ```
 #### Get data for specific recovery group
 GET /disaster-recovery/v1beta1/virtual-continuous-protection-recovery/{{DSCC_VPG_UDID}}
