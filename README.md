@@ -21,7 +21,8 @@ Response:
             "resourceUri": "/api/v1/virtual-sites/9758fdb9-1be2-4b67-b2f0-f7f071124c85",
             "generation": 1,
             "refreshedAt": "2023-03-13T07:47:45.547615Z",
-            "createdAt": "2023-03-13T07:47:44.233091Z"
+            "createdAt": "2023-03-13T07:47:44.233091Z",
+            "version": "10.0.10"
         }
     ],
     "limit": 20000,
@@ -48,7 +49,8 @@ Response:   
     "resourceUri": "/api/v1/virtual-sites/9758fdb9-1be2-4b67-b2f0-f7f071124c85",
     "generation": 1,
     "refreshedAt": "2023-03-13T07:47:45.547615Z",
-    "createdAt": "2023-03-13T07:47:44.233091Z"
+    "createdAt": "2023-03-13T07:47:44.233091Z",
+    "version": "10.0.10"
 }
 ```
 #### Add Site to DSCC
