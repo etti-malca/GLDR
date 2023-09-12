@@ -468,23 +468,23 @@ Response:
                         {
                             "id": "<string>",
                             "failover": {
-                                "networkID": "",
+                                "network": "",
                                 "staticIP": "",
                                 "replaceMacAddress": "false",
                                 "isDhcp": "true",
                                 "subnetMask": "",
-                                "getway": "",
+                                "gateway": "",
                                 "primaryDNS": "",
                                 "secondaryDNS": "",
                                 "dnsSuffix": ""
                             },
                             "test": {
-                                "networkID": "<uuid>",
+                                "network": "<uuid>",
                                 "staticIP": "<string>",
                                 "replaceMacAddress": "false",
                                 "isDhcp": "true",
                                 "subnetMask": "<string>",
-                                "getway": "<string>",
+                                "gateway": "<string>",
                                 "primaryDNS": "<string>",
                                 "secondaryDNS": "<string>",
                                 "dnsSuffix": "<string>"
