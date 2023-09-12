@@ -464,6 +464,33 @@ Response:
             "virtualMachines": [
                 {
                     "id": "1216926d-410e-5fde-a3e6-1076aafde55e"
+                     "networkAdapters": [
+                        {
+                            "id": "<string>",
+                            "failover": {
+                                "networkID": "",
+                                "staticIP": "",
+                                "replaceMacAddress": "false",
+                                "isDhcp": "true",
+                                "subnetMask": "",
+                                "getway": "",
+                                "primaryDNS": "",
+                                "secondaryDNS": "",
+                                "dnsSuffix": ""
+                            },
+                            "test": {
+                                "networkID": "<uuid>",
+                                "staticIP": "<string>",
+                                "replaceMacAddress": "false",
+                                "isDhcp": "true",
+                                "subnetMask": "<string>",
+                                "getway": "<string>",
+                                "primaryDNS": "<string>",
+                                "secondaryDNS": "<string>",
+                                "dnsSuffix": "<string>"
+                            }
+                        }
+                    ]
                 }
             ],
             "type": "virtual-continuous-protection-group",
@@ -508,6 +535,35 @@ Response:
     "virtualMachines": [
         {
             "id": "1216926d-410e-5fde-a3e6-1076aafde55e"
+            "networkAdapters": [
+                        {
+                            "id": "<string>",
+                            "failover": {
+                                "networkID": "",
+                                "staticIP": "",
+                                "replaceMacAddress": "false",
+                                "isDhcp": "true",
+                                "subnetMask": "",
+                                "getway": "",
+                                "primaryDNS": "",
+                                "secondaryDNS": "",
+                                "dnsSuffix": ""
+                            },
+                            "test": {
+                                "networkID": "<uuid>",
+                                "staticIP": "<string>",
+                                "replaceMacAddress": "false",
+                                "isDhcp": "true",
+                                "subnetMask": "<string>",
+                                "getway": "<string>",
+                                "primaryDNS": "<string>",
+                                "secondaryDNS": "<string>",
+                                "dnsSuffix": "<string>"
+                            }
+                        }
+                    ]
+                }
+            ],
         }
     ],
     "type": "virtual-continuous-protection-group",
