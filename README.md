@@ -98,6 +98,7 @@ Response:
         "customerId": "fe0d3faa-ae9f-11ec-a437-ea9dc4f11500",
         "internalId": "0c363daf-b9fd-4647-b99e-50332d1a5ba6.vm-1230",
         "siteId": "0e930aa7-3b47-4da2-825b-cde9e08383f4",
+        "IsAgentInstalled": false,
         "protected": false,
         "virtualDisks": [
             {
