@@ -423,7 +423,38 @@ Body:
     },
   "virtualMachines":[ 
       {         
-         "id":"{{VmIdentifier}}"
+         "id":"{{VmIdentifier}}",
+         "networkAdapters": [
+                {
+                    "id": "<string>",
+                    "failover": {
+                         "networkID": "",
+                         "shouldReplaceMacAddress": false,
+                         "ipConfig": {
+                            "staticIP": "",
+                            "isDhcp": true,
+                            "subnetMask": "",
+                            "gateway": "",
+                            "primaryDNS": "",
+                            "secondaryDNS": "",
+                            "dnsSuffix": ""
+                          }
+                    },
+                    "test": {
+                         "networkID": "",
+                         "shouldReplaceMacAddress": false,
+                         "ipConfig": {
+                            "staticIP": "",
+                            "isDhcp": true,
+                            "subnetMask": "",
+                            "gateway": "",
+                            "primaryDNS": "",
+                            "secondaryDNS": "",
+                            "dnsSuffix": ""
+                          }
+                    }
+                }
+            ]
       }
    ]
 }
@@ -464,14 +495,14 @@ Response:
             },
             "virtualMachines": [
                 {
-                    "id": "1216926d-410e-5fde-a3e6-1076aafde55e"
+                    "id": "1216926d-410e-5fde-a3e6-1076aafde55e",
                      "networkAdapters": [
                         {
                             "id": "<string>",
                             "failover": {
                                 "network": "",
                                 "staticIP": "",
-                                "replaceMacAddress": "false",
+                                "shouldReplaceMacAddress": "false",
                                 "isDhcp": "true",
                                 "subnetMask": "",
                                 "gateway": "",
@@ -482,7 +513,7 @@ Response:
                             "test": {
                                 "network": "<uuid>",
                                 "staticIP": "<string>",
-                                "replaceMacAddress": "false",
+                                "shouldReplaceMacAddress": "false",
                                 "isDhcp": "true",
                                 "subnetMask": "<string>",
                                 "gateway": "<string>",
@@ -542,7 +573,7 @@ Response:
                             "failover": {
                                 "networkID": "",
                                 "staticIP": "",
-                                "replaceMacAddress": "false",
+                                "shouldReplaceMacAddress": "false",
                                 "isDhcp": "true",
                                 "subnetMask": "",
                                 "getway": "",
@@ -553,7 +584,7 @@ Response:
                             "test": {
                                 "networkID": "<uuid>",
                                 "staticIP": "<string>",
-                                "replaceMacAddress": "false",
+                                "shouldReplaceMacAddress": "false",
                                 "isDhcp": "true",
                                 "subnetMask": "<string>",
                                 "getway": "<string>",
@@ -597,8 +628,41 @@ Body:
         "testNetwork":"{{tmp_vpg_testNetwork}}"
     },
     "virtualMachines":[
-        {"id":"fe68326c-b08f-5516-a82c-e6c56ddd8d60"}
-        ]
+        {
+             "id":"fe68326c-b08f-5516-a82c-e6c56ddd8d60"
+             "networkAdapters": [
+                {
+                    "id": "<string>",
+                    "failover": {
+                         "networkID": "",
+                         "shouldReplaceMacAddress": false,
+                         "ipConfig": {
+                            "staticIP": "",
+                            "isDhcp": true,
+                            "subnetMask": "",
+                            "gateway": "",
+                            "primaryDNS": "",
+                            "secondaryDNS": "",
+                            "dnsSuffix": ""
+                          }
+                    },
+                    "test": {
+                         "networkID": "",
+                         "shouldReplaceMacAddress": false,
+                         "ipConfig": {
+                            "staticIP": "",
+                            "isDhcp": true,
+                            "subnetMask": "",
+                            "gateway": "",
+                            "primaryDNS": "",
+                            "secondaryDNS": "",
+                            "dnsSuffix": ""
+                          }
+                    }
+                }
+            ]
+        }
+    ]
 }
 
 
