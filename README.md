@@ -72,11 +72,8 @@ Response:
 POST /disaster-recovery/v1beta1/virtual-sites/{id}/refresh
 
 Response:
-```
-{
-    "taskId": "ddd39ad3-a331-400a-9e35-0948433e58ee"
-}
-```
+200 OK
+
 #### Delete a site from DSCC
 DELETE /disaster-recovery/v1beta1/virtual-sites/{id}
 
