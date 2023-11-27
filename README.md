@@ -481,7 +481,7 @@ Response:
                 "id": "cfa2cc63-e43b-4f6e-82fb-b6737fce029b",
                 "name": "accusamus"
             },
-            "hypervisor": {
+            "recoveryVcenter": {
                 "host": "5ecdbc67-0bd9-321f-8cc6-03fb2c2da6b7",
                 "datastore": "be556441-a07f-3ad0-998f-4288a2f09ec2",
                 "cluster": "",
@@ -490,7 +490,9 @@ Response:
                 "network": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f",
                 "testNetwork": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f"
             },
-            "virtualMachines": [
+           "protectedEntities":{
+            "entityType":"CSP/VCENTER",
+             "items": [
                 {
                     "id": "1216926d-410e-5fde-a3e6-1076aafde55e",
                      "networkAdapters": [
@@ -522,6 +524,7 @@ Response:
                     ]
                 }
             ],
+            }
             "type": "virtual-continuous-protection-group",
             "resourceUri": "/api/v1/virtual-continuous-protection-groups/95d4e310-39a1-11ed-8051-56e786f00957",
             "customerId": "95d4e310-39a1-11ed-8051-56e786f00957",
