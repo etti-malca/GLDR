@@ -419,7 +419,6 @@ Body:
     "testNetwork":"{{NetworkIdentifier}}"
     },
   "protectedEntities":{
-    "entityType": "CSP/VCENTER",
     "items":[ 
       {         
          "id":"{{VmIdentifier}}",
@@ -634,7 +633,6 @@ Body:
         "testNetwork":"{{tmp_vpg_testNetwork}}"
     },
     "protectedEntities":{
-        "entityType":"VCENTER",
         "items":[
             {
              "id":"fe68326c-b08f-5516-a82c-e6c56ddd8d60"
