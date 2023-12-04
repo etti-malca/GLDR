@@ -1265,6 +1265,26 @@ POST /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/{clusterID
 
 Response: 
 ```
+
+#### Upgrade VRA (Host)
+POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}/upgrade
+
+Response: 
+```
+{
+    "taskUri": "/api/v1/tasks/040eee1f-7930-445a-916a-d484a249fbea"
+}
+```
+
+#### Upgrade VRA (Cluster)
+POST /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/{clusterID}/upgrade
+
+Response: 
+```
+{
+    "taskUri": "/api/v1/tasks/52a54a16-e748-4f84-b4c6-62afca249447"
+}
+```
 {
     "taskUri": "/api/v1/tasks/4c538768-86b2-4196-8352-06f1bf06edf6"
 }
