@@ -1101,17 +1101,17 @@ Response:
             "associatedVra": {
                 "name": "Z-VRA-soluta",
                 "ipAddress": "86.132.122.254",
-                "version": "8.0",
+                "version": "8.0.10",
                 "status": "READY"
             },
             "vraConfiguration": {
                 "network": "37e1c5a5-2f9f-3be6-b786-dab1885ed62f",
                 "datastore": "52353a60-1b30-3a8a-9f4b-f6faa60333d2",
                 "setHostPassword": false,
-                "ipType": "DHCP",
-                "ipAddress": "",
-                "subnetMask": "",
-                "defaultGateway": ""
+                "ipType": "Static",
+                "ipAddress": "10.171.39.14",
+                "subnetMask": "255.255.240.0",
+                "defaultGateway": "10.171.47.254"
             },
             "createdAt": "2023-11-09T10:32:30.441178Z",
             "updatedAt": "2023-11-09T10:32:36.241597Z",
@@ -1134,22 +1134,22 @@ Response:
 ```
 {
   [
-    "id":"string",
-    "name":"string",
+    "id":"d7cf09d2-16db-35e3-b552-e43dcfe4d974",
+    "name":"clusterName",
     "associatedVma": {
-            "id":"UUID",
-            "name": "string",
-            "address": "string"
+        "id": "a54a5a61-2cc6-42cc-8468-8094d0595326",
+        "name": "ut",
+        "address": "185.229.31.138",
             },
     "defaultConfiguration": {
-        "network": "uuid",
-        "datastore": "uuid",
-        "setHostPassword": "bool",
-        "ipType": "string", Statsic or DHCP
-        "ipRangeStart": "string",
-        "ipRangeEnd": "string",
-        "subnetMask": "string"
-        "defaultGateway": "string"
+        "network": "37e1c5a5-2f9f-3be6-b786-dab1885ed62f",
+        "datastore": "52353a60-1b30-3a8a-9f4b-f6faa60333d2",
+        "setHostPassword": false,
+        "ipType": "Static",
+        "ipRangeStart": "10.171.0.20",
+        "ipRangeEnd": "10.171.0.40",
+        "subnetMask": "255.255.240.0",
+        "defaultGateway": "10.171.47.254"
       },
   ]
 }
@@ -1164,7 +1164,7 @@ Body:
 "network": "c65d935a-9a6c-335e-a01a-48f55012701e",
 "datastore": "1a789dda-3b60-307d-8f77-e3c3d9ab28cd",
 "setHostPassword": true,
-"hostRootPassword": "QAD@ta2023!#", --> not mandatory and depand on the set above 
+"hostRootPassword": "QAD@ta2023!#", --> not mandatory and depend on the set above 
 "ipType": "Static",
 "ipAddress": "10.171.11.27",
 "subnetMask": "255.255.240.0",
@@ -1188,7 +1188,7 @@ Body:
     "datastore": "uuid",
     "setHostPassword": "bool",
     "hostRootPassword": "string", 
-    "ipType": "string",--> Statsic or DHCP
+    "ipType": "string",--> Static
     "ipRangeStart": "string",
     "ipRangeEnd": "string",
     "subnetMask": "string",
@@ -1211,7 +1211,7 @@ Body:
 {
     "setHostPassword": "bool",
     "hostRootPassword": "string",
-    "ipType": "string",--> Statsic or DHCP
+    "ipType": "string",--> Static
     "ipRangeStart": "string",
     "ipRangeEnd": "string",
     "subnetMask": "string"
@@ -1234,7 +1234,7 @@ Body:
 {
     "setHostPassword": "bool",
     "hostRootPassword": "string",
-    "ipType": "string",--> Statsic or DHCP
+    "ipType": "string",--> Static
     "ipRangeStart": "string",
     "ipRangeEnd": "string",
     "subnetMask": "string",
@@ -1265,6 +1265,10 @@ POST /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/{clusterID
 
 Response: 
 ```
+{
+    "taskUri": "/api/v1/tasks/4c538768-86b2-4196-8352-06f1bf06edf6"
+}
+```
 
 #### Upgrade VRA (Host)
 POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}/upgrade
@@ -1283,9 +1287,5 @@ Response:
 ```
 {
     "taskUri": "/api/v1/tasks/52a54a16-e748-4f84-b4c6-62afca249447"
-}
-```
-{
-    "taskUri": "/api/v1/tasks/4c538768-86b2-4196-8352-06f1bf06edf6"
 }
 ```
