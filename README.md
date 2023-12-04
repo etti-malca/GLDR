@@ -1075,3 +1075,197 @@ Response:
 ```
 <FILE>
 ```
+
+
+## HOSTS
+#### GET Host data
+GET /disaster-recovery/v1beta1/virtual-continuous-host-protectors/
+
+Response:
+```
+{
+    "items":
+    [
+        {
+            "id": "d7cf09d2-16db-35e3-b552-e43dcfe4d974",
+            "customerId": "d293d71c-0b4b-11ee-ab1f-9a4e6a06796a",
+            "address": "soluta",
+            "clusterId": "",
+            "version": "",
+            "associatedSite": {
+                "id": "a54a5a61-2cc6-42cc-8468-8094d0595326",
+                "name": "ut",
+                "address": "185.229.31.138",
+                "resourceUri": "/disaster-recovery/v1beta1/virtual-sites/a54a5a61-2cc6-42cc-8468-8094d0595326"
+            },
+            "associatedVra": {
+                "name": "Z-VRA-soluta",
+                "ipAddress": "86.132.122.254",
+                "version": "8.0",
+                "status": "READY"
+            },
+            "vraConfiguration": {
+                "network": "37e1c5a5-2f9f-3be6-b786-dab1885ed62f",
+                "datastore": "52353a60-1b30-3a8a-9f4b-f6faa60333d2",
+                "setHostPassword": false,
+                "ipType": "DHCP",
+                "ipAddress": "",
+                "subnetMask": "",
+                "defaultGateway": ""
+            },
+            "createdAt": "2023-11-09T10:32:30.441178Z",
+            "updatedAt": "2023-11-09T10:32:36.241597Z",
+            "refreshedAt": "2023-11-09T10:41:23.770379Z",
+            "type": "virtual-continuous-host-protector",
+            "resourceUri": "/disaster-recovery/v1beta1/virtual-continuous-host-protectors/d7cf09d2-16db-35e3-b552-e43dcfe4d974",
+            "generation": 3
+        }
+    ],
+    "limit": 20000,
+    "offset": 0,
+    "total": 1
+}
+```
+
+#### GET Cluster Data
+GET /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/
+
+Response:
+```
+{
+  [
+    "id":"string",
+    "name":"string",
+    "associatedVma": {
+            "id":"UUID",
+            "name": "string",
+            "address": "string"
+            },
+    "defaultConfiguration": {
+        "network": "uuid",
+        "datastore": "uuid",
+        "setHostPassword": "bool",
+        "ipType": "string", Statsic or DHCP
+        "ipRangeStart": "string",
+        "ipRangeEnd": "string",
+        "subnetMask": "string"
+        "defaultGateway": "string"
+      },
+  ]
+}
+```
+
+#### Deploy VRA (Host)
+POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}/deploy
+
+Body: 
+```
+{
+"network": "c65d935a-9a6c-335e-a01a-48f55012701e",
+"datastore": "1a789dda-3b60-307d-8f77-e3c3d9ab28cd",
+"setHostPassword": true,
+"hostRootPassword": "QAD@ta2023!#", --> not mandatory and depand on the set above 
+"ipType": "Static",
+"ipAddress": "10.171.11.27",
+"subnetMask": "255.255.240.0",
+"defaultGateway": "10.171.15.254"
+}
+```
+Response: 
+```
+{
+    "taskUri": "/api/v1/tasks/27126c1a-4fc9-4f6b-9a67-373567f70e73"
+}
+```
+
+#### Deploy VRA (Cluster)
+POST /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/{clusterID}/deploy
+
+Body:
+```
+{
+    "network": "uuid",
+    "datastore": "uuid",
+    "setHostPassword": "bool",
+    "hostRootPassword": "string", 
+    "ipType": "string",--> Statsic or DHCP
+    "ipRangeStart": "string",
+    "ipRangeEnd": "string",
+    "subnetMask": "string",
+    "defaultGateway": "string",
+    "setAsDefaultConfiguration": "bool"
+}
+```
+Response: 
+```
+{
+    "taskUri": "/api/v1/tasks/1d58c8ab-a318-4591-9b48-b8909c2dff7d"
+}
+```
+
+#### Edit VRA (Host)
+PUT /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}
+
+Body: 
+```
+{
+    "setHostPassword": "bool",
+    "hostRootPassword": "string",
+    "ipType": "string",--> Statsic or DHCP
+    "ipRangeStart": "string",
+    "ipRangeEnd": "string",
+    "subnetMask": "string"
+    "defaultGateway": "string"
+}
+```
+
+Response: 
+```
+{
+    "taskUri": "/api/v1/tasks/e63b3f81-5ada-40b5-82ad-420af30715ed"
+}
+```
+
+#### Edit VRA (cluster)
+PUT /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/{clusterID}
+
+Body: 
+```
+{
+    "setHostPassword": "bool",
+    "hostRootPassword": "string",
+    "ipType": "string",--> Statsic or DHCP
+    "ipRangeStart": "string",
+    "ipRangeEnd": "string",
+    "subnetMask": "string",
+    "defaultGateway": "string",
+    "setAsDefaultConfiguration": "bool"
+}
+```
+
+Response: 
+```
+{
+    "taskUri": "/api/v1/tasks/8f091e30-ead9-4c6f-ab71-66da52010bc8"
+}
+```
+
+#### Delete VRA (Host)
+POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}/remove
+
+Response: 
+```
+{
+    "taskUri": "/api/v1/tasks/5d3c8ed0-e8cb-406a-996f-0518493edc2e"
+}
+```
+
+#### Delete VRA (Cluster)
+POST /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/{clusterID}/remove
+
+Response: 
+```
+{
+    "taskUri": "/api/v1/tasks/4c538768-86b2-4196-8352-06f1bf06edf6"
+}
+```
