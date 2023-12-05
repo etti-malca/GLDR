@@ -82,7 +82,7 @@ Response:
 
 ## VIRTUALIZATION 
 #### Get list of Virtual-machines for a specific Protection site ID (remove everything after the question mark (including) - to get  for all customer sites)
-GET /api/temp/zerto-virtual-machines?siteId={siteId}
+GET /disaster-recovery/v1alpha1/virtualization/hypervisor-virtual-machines?siteId={siteId}
 
 Response:
 ```
@@ -129,7 +129,7 @@ Response:
 ]
 ```
 #### Protection site ID as param Refresh virtual machines list 
-POST /api/temp/zerto-virtual-machines/refresh
+POST /disaster-recovery/v1alpha1/virtualization/hypervisor-virtual-machines/refresh
 
 Body:
 ```
@@ -144,7 +144,7 @@ Response:
 }
 ```
 #### Get a list of Hypervisor-host (remove everything after the question mark (including) - to get  for all customer sites)
-GET /api/temp/zerto-hypervisor-hosts?siteId={siteId}
+GET /disaster-recovery/v1alpha1/virtualization/hypervisor-hosts?siteId={siteId}
 
 Response:
 ```
@@ -176,7 +176,7 @@ Response:
 ]
 ```
 #### Recovery site ID as param recovery site Refresh Hypervisor-host list 
-POST /api/temp/zerto-hypervisor-hosts/refresh
+POST /disaster-recovery/v1alpha1/virtualization/hypervisor-hosts/refresh
 
 Body:
 ```
@@ -191,7 +191,7 @@ Response:
 }
 ```
 #### Get a list of Hypervisor-clusters (remove everything after the question mark (including) - to get  for all customer sites)
-GET /api/temp/zerto-hypervisor-clusters?siteId={siteId}
+GET /disaster-recovery/v1alpha1/virtualization/hypervisor-clusters?siteId={siteId}
 
 Response:
 ```
@@ -257,7 +257,7 @@ Response:
 ]
 ```
 #### Recovery site ID as param recovery site Refresh Hypervisor-cluster list
- POST /api/temp/zerto-hypervisor-clusters/refresh
+ POST /disaster-recovery/v1alpha1/virtualization/hypervisor-clusters/refresh
  
 Body:
 ```
@@ -272,7 +272,7 @@ Response:
 }
 ```
 #### Get a list of hypervisor-datastores (remove everything after the question mark (including) - to get  for all customer sites)
-GET /api/temp/zerto-hypervisor-datastores?siteId={siteId}
+GET /disaster-recovery/v1alpha1/virtualization/hypervisor-datastores?siteId={siteId}
 
 ```
 [
@@ -289,7 +289,7 @@ GET /api/temp/zerto-hypervisor-datastores?siteId={siteId}
 ]
 ```
 #### Recovery site ID as param recovery site Refresh hypervisor-datastores list 
-POST /api/temp/zerto-hypervisor-datastores/refresh
+POST /disaster-recovery/v1alpha1/virtualization/hypervisor-datastores/refresh
 
 Body:
 ```
@@ -304,7 +304,7 @@ Response:
 }
 ```
 #### Get a list of hypervisor-networks (remove everything after the question mark (including) - to get  for all customer sites)
-GET /api/temp/zerto-hypervisor-networks?siteId={siteId}
+GET /disaster-recovery/v1alpha1/virtualization/hypervisor-networks?siteId={siteId}
 
 Response:
 ```
@@ -321,7 +321,7 @@ Response:
 ]
 ```
 #### Recovery site ID as param recovery siteRefresh hypervisor-networks list 
-POST /api/temp/zerto-hypervisor-networks/refresh
+POST /disaster-recovery/v1alpha1/virtualization/hypervisor-networks/refresh
 
 Body: 
 ```
@@ -336,7 +336,7 @@ Response:
 }
 ```
 #### Get a list of hypervisor-folders (remove everything after the question mark (including) - to get  for all customer sites)
-GET /api/temp/zerto-hypervisor-folders?siteId={siteId}
+GET /disaster-recovery/v1alpha1/virtualization/hypervisor-folders?siteId={siteId}
 
 Response:
 ```
@@ -353,7 +353,7 @@ Response:
 ]
 ```
 #### Recovery site ID as param recovery siteRefresh hypervisor-folders list 
-POST /api/temp/zerto-hypervisor-folders/refresh
+POST /disaster-recovery/v1alpha1/virtualization/hypervisor-folders/refresh
 
 Bosy:
 ```
@@ -368,7 +368,7 @@ Response:
 }
 ```
 #### Get a list of hypervisor-datastore-clusters (remove everything after the question mark (including) - to get  for all customer sites)
-GET /api/temp/zerto-hypervisor-datastore-clusters?siteId={siteId}
+GET /disaster-recovery/v1alpha1/virtualization/hypervisor-datastore-clusters?siteId={siteId}
 
 Response:
 ```
@@ -385,7 +385,195 @@ Response:
 ]
 ```
 #### Recovery site ID as param recovery siteRefresh hypervisor-datastore-clusters list 
-POST /api/temp/zerto-hypervisor-datastore-clusters/refresh
+POST /disaster-recovery/v1alpha1/virtualization/hypervisor-datastore-clusters/refresh
+
+Body:
+```
+{
+    "siteId":"{{RecoverySiteIdentifier}}"
+}
+```
+Response:
+```
+{
+    "taskUri": "/api/v1/tasks/0ea06a97-41d6-4b68-8eec-fc753de4eae7"
+}
+```
+#### Get a list of csp-machine-instance (remove everything after the question mark (including) - to get  for all customer sites)
+GET /disaster-recovery/v1alpha1/virtualization/csp-machine-instances?siteId={siteId}
+
+Response:
+```
+[
+    {
+        "lastUpdatedAt": "2023-07-23T07:32:42Z",
+        "id": "5553e594-f868-5c60-8f77-d9431df1b0fb",
+        "name": "qa_s4v5_dmy_eyalgad",
+        "type": "csp-machine-instances",
+        "customerId": "fe0d3faa-ae9f-11ec-a437-ea9dc4f11500",
+        "cspId": "0c363daf-b9fd-4647-b99e-50332d1a5ba6.vm-1230",
+        "isAgentInstalled": false,
+        "protected": false,
+        "virtualDisks": [
+            {
+                "id": "",
+                "internalId": "scsi:0:0"
+            },
+            {
+                "id": "",
+                "internalId": "scsi:0:1"
+            },
+            {
+                "id": "",
+                "internalId": "scsi:0:2"
+            }
+        ],
+        "networkAdapters": [
+            {
+                "networkDetails": {
+                    "id": "",
+                    "internalId": "Network adapter 1"
+                }
+            },
+            {
+                "networkDetails": {
+                    "id": "",
+                    "internalId": "Network adapter 2"
+                }
+            }
+        ]
+    }
+]
+```
+#### Recovery site ID as param recovery siteRefresh csp-machine-instances list 
+POST /disaster-recovery/v1alpha1/virtualization/csp-machine-instances/refresh
+
+Body:
+```
+{
+    "siteId":"{{RecoverySiteIdentifier}}"
+}
+```
+Response:
+```
+{
+    "taskUri": "/api/v1/tasks/0ea06a97-41d6-4b68-8eec-fc753de4eae7"
+}
+```
+#### Get a list of csp-security-groups (remove everything after the question mark (including) - to get  for all customer sites)
+GET /disaster-recovery/v1alpha1/virtualization/csp-security-groups?siteId={siteId}
+
+Response:
+```
+[
+     {
+        "lastUpdatedAt": "2023-07-23T07:42:44Z",
+        "id": "a1f3b582-7d1c-3635-8935-d4f5398b3118",
+        "name": "DatastoreClusterH100H122_changed",
+        "type": "csp-security-groups",
+        "customerId": "fe0d3faa-ae9f-11ec-a437-ea9dc4f11500",
+        "cspId": "0c363daf-b9fd-4647-b99e-50332d1a5ba6.group-p417"
+    }
+]
+```
+#### Recovery site ID as param recovery siteRefresh csp-security-groups list 
+POST /disaster-recovery/v1alpha1/virtualization/csp-security-groups/refresh
+
+Body:
+```
+{
+    "siteId":"{{RecoverySiteIdentifier}}"
+}
+```
+Response:
+```
+{
+    "taskUri": "/api/v1/tasks/0ea06a97-41d6-4b68-8eec-fc753de4eae7"
+}
+```
+#### Get a list of csp-subnets (remove everything after the question mark (including) - to get  for all customer sites)
+GET /disaster-recovery/v1alpha1/virtualization/csp-subnets?siteId={siteId}
+
+Response:
+```
+[
+     {
+        "lastUpdatedAt": "2023-07-23T07:42:44Z",
+        "id": "a1f3b582-7d1c-3635-8935-d4f5398b3118",
+        "name": "DatastoreClusterH100H122_changed",
+        "type": "csp-subnets",
+        "customerId": "fe0d3faa-ae9f-11ec-a437-ea9dc4f11500",
+        "cspId": "0c363daf-b9fd-4647-b99e-50332d1a5ba6.group-p417"
+        "virtualNetworkId": "0e9323a7-3b47-4da2-825b-cde9e08383f4"
+        "ipRange": ""
+    }
+]
+```
+#### Recovery site ID as param recovery siteRefresh csp-subnets list 
+POST /disaster-recovery/v1alpha1/virtualization/csp-subnets/refresh
+
+Body:
+```
+{
+    "siteId":"{{RecoverySiteIdentifier}}"
+}
+```
+Response:
+```
+{
+    "taskUri": "/api/v1/tasks/0ea06a97-41d6-4b68-8eec-fc753de4eae7"
+}
+```
+#### Get a list of csp-vpcs (remove everything after the question mark (including) - to get  for all customer sites)
+GET /disaster-recovery/v1alpha1/virtualization/csp-vpcs?siteId={siteId}
+
+Response:
+```
+[
+    {
+        "id": "ecaa9b14-8943-357a-b264-70191d4287b4",
+        "name": "SG4",
+        "type": "csp-vpcs",
+        "lastUpdatedAt": "2022-06-14T13:12:36Z",
+        "customerId": "ac535f94eaec11ecbabefab33ff4092c",
+        "cspId": "02ed58e0-ad7b-4f35-ad5a-9d5fe4ab5017.group-p494"
+    }
+]
+```
+#### Recovery site ID as param recovery siteRefresh csp-vpcs list 
+POST /disaster-recovery/v1alpha1/virtualization/csp-vpcs/refresh
+
+Body:
+```
+{
+    "siteId":"{{RecoverySiteIdentifier}}"
+}
+```
+Response:
+```
+{
+    "taskUri": "/api/v1/tasks/0ea06a97-41d6-4b68-8eec-fc753de4eae7"
+}
+```
+#### Get a list of csp-machine-instance-types (remove everything after the question mark (including) - to get  for all customer sites)
+GET /disaster-recovery/v1alpha1/virtualization/csp-machine-instance-types?siteId={siteId}
+
+Response:
+```
+[
+    {
+        "type": "csp-machine-instance-types",
+        "lastUpdatedAt": "2022-06-14T13:12:36Z",
+        "customerId": "ac535f94eaec11ecbabefab33ff4092c",
+        "vmInstanceType": "string",
+        "description": "string"
+        "vmSeries": "string"
+        "isPremiumSupported": "boolean"
+    }
+]
+```
+#### Recovery site ID as param recovery siteRefresh csp-machine-instance-types list 
+POST /disaster-recovery/v1alpha1/virtualization/csp-machine-instance-types/refresh
 
 Body:
 ```
