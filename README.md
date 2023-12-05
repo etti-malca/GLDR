@@ -1,4 +1,4 @@
-# GLDR APIS
+# GLDR APIs
 ## SITES
 #### Gets list of sites added to DSCC
 GET /disaster-recovery/v1beta1/virtual-sites
