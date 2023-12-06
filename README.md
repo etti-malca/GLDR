@@ -1413,8 +1413,7 @@ Body:
     "setHostPassword": "bool",
     "hostRootPassword": "string",
     "ipType": "string",--> Static
-    "ipRangeStart": "string",
-    "ipRangeEnd": "string",
+    "ipAddress": "string",
     "subnetMask": "string"
     "defaultGateway": "string"
 }
