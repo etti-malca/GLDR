@@ -1321,25 +1321,38 @@ GET /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/
 Response:
 ```
 {
-  [
-    "id":"d7cf09d2-16db-35e3-b552-e43dcfe4d974",
-    "name":"clusterName",
-    "associatedVma": {
-        "id": "a54a5a61-2cc6-42cc-8468-8094d0595326",
-        "name": "ut",
-        "address": "185.229.31.138",
+    "items": [
+        {
+            "id": "4a0c21ea-cb8d-3132-a9c5-69b6fbf8709d",
+            "customerId": "d293d71c-0b4b-11ee-ab1f-9a4e6a06796a",
+            "name": "sed",
+            "associatedSite": {
+                "id": "09abb7ba-8d22-417e-afdc-be5155d08793",
+                "name": "maiores",
+                "address": "226.41.217.194",
+                "resourceUri": "/disaster-recovery/v1beta1/virtual-sites/09abb7ba-8d22-417e-afdc-be5155d08793"
             },
-    "defaultConfiguration": {
-        "network": "37e1c5a5-2f9f-3be6-b786-dab1885ed62f",
-        "datastore": "52353a60-1b30-3a8a-9f4b-f6faa60333d2",
-        "setHostPassword": false,
-        "ipType": "Static",
-        "ipRangeStart": "10.171.0.20",
-        "ipRangeEnd": "10.171.0.40",
-        "subnetMask": "255.255.240.0",
-        "defaultGateway": "10.171.47.254"
-      },
-  ]
+            "defaultVraConfiguration": {
+                "network": "aebb692a-834e-3a15-a734-f6674e40b44e",
+                "datastore": "61463f8f-1dc1-3d2e-a6d0-f622bf0e82aa",
+                "setHostPassword": false,
+                "ipType": "Static",
+                "ipRangeStart": "1.1.1.1",
+                "ipRangeEnd": "1.1.1.3",
+                "subnetMask": "255.255.240.0",
+                "defaultGateway": "1.1.1.254"
+            },
+            "createdAt": "2023-12-05T12:11:32.280046Z",
+            "updatedAt": "2023-12-05T12:15:39.504083Z",
+            "refreshedAt": "2023-12-05T12:15:39.504083Z",
+            "type": "virtual-continuous-cluster-protector",
+            "resourceUri": "/disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/4a0c21ea-cb8d-3132-a9c5-69b6fbf8709d",
+            "generation": 2
+        }
+    ],
+    "count": 1,
+    "offset": 0,
+    "total": 1
 }
 ```
 
@@ -1349,14 +1362,14 @@ POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}/depl
 Body: 
 ```
 {
-"network": "c65d935a-9a6c-335e-a01a-48f55012701e",
-"datastore": "1a789dda-3b60-307d-8f77-e3c3d9ab28cd",
-"setHostPassword": true,
-"hostRootPassword": "QAD@ta2023!#", --> not mandatory and depend on the set above 
-"ipType": "Static",
-"ipAddress": "10.171.11.27",
-"subnetMask": "255.255.240.0",
-"defaultGateway": "10.171.15.254"
+    "network": "c65d935a-9a6c-335e-a01a-48f55012701e",
+    "datastore": "1a789dda-3b60-307d-8f77-e3c3d9ab28cd",
+    "setHostPassword": true,
+    "hostRootPassword": "QAD@ta2023!#", --> not mandatory and depend on the set above 
+    "ipType": "Static",
+    "ipAddress": "10.171.11.27",
+    "subnetMask": "255.255.240.0",
+    "defaultGateway": "10.171.15.254"
 }
 ```
 Response: 
@@ -1400,8 +1413,7 @@ Body:
     "setHostPassword": "bool",
     "hostRootPassword": "string",
     "ipType": "string",--> Static
-    "ipRangeStart": "string",
-    "ipRangeEnd": "string",
+    "ipAddress": "string",
     "subnetMask": "string"
     "defaultGateway": "string"
 }
@@ -1414,29 +1426,6 @@ Response:
 }
 ```
 
-#### Edit VRA (cluster)
-PUT /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/{clusterID}
-
-Body: 
-```
-{
-    "setHostPassword": "bool",
-    "hostRootPassword": "string",
-    "ipType": "string",--> Static
-    "ipRangeStart": "string",
-    "ipRangeEnd": "string",
-    "subnetMask": "string",
-    "defaultGateway": "string",
-    "setAsDefaultConfiguration": "bool"
-}
-```
-
-Response: 
-```
-{
-    "taskUri": "/api/v1/tasks/8f091e30-ead9-4c6f-ab71-66da52010bc8"
-}
-```
 
 #### Delete VRA (Host)
 POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}/remove
