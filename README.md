@@ -1476,9 +1476,4 @@ Body:
     "siteId":"512b5370-26e5-42f3-b21d-398db98de4bd"
 }
 ```
-Response: 
-```
-{
-    "taskUri": "/api/v1/tasks/7e856a08-aafb-4262-88d6-03ac183abd73"
-}
-```
+
