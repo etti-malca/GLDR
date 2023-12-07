@@ -1466,3 +1466,14 @@ Response:
     "taskUri": "/api/v1/tasks/52a54a16-e748-4f84-b4c6-62afca249447"
 }
 ```
+
+#### Refresh
+POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/refresh
+
+Body:
+```
+{
+    "siteId":"512b5370-26e5-42f3-b21d-398db98de4bd"
+}
+```
+
