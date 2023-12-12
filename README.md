@@ -1282,8 +1282,6 @@ Response:
             "version": "",
             "associatedSite": {
                 "id": "a54a5a61-2cc6-42cc-8468-8094d0595326",
-                "name": "ut",
-                "address": "185.229.31.138",
                 "resourceUri": "/disaster-recovery/v1beta1/virtual-sites/a54a5a61-2cc6-42cc-8468-8094d0595326"
             },
             "associatedVra": {
@@ -1328,8 +1326,6 @@ Response:
             "name": "sed",
             "associatedSite": {
                 "id": "09abb7ba-8d22-417e-afdc-be5155d08793",
-                "name": "maiores",
-                "address": "226.41.217.194",
                 "resourceUri": "/disaster-recovery/v1beta1/virtual-sites/09abb7ba-8d22-417e-afdc-be5155d08793"
             },
             "defaultVraConfiguration": {
