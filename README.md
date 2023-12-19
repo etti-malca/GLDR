@@ -1307,7 +1307,7 @@ Response:
             "generation": 3
         }
     ],
-    "limit": 20000,
+    "count": 1,
     "offset": 0,
     "total": 1
 }
@@ -1361,7 +1361,7 @@ Body:
     "network": "c65d935a-9a6c-335e-a01a-48f55012701e",
     "datastore": "1a789dda-3b60-307d-8f77-e3c3d9ab28cd",
     "setHostPassword": true,
-    "hostRootPassword": "QAD@ta2023!#", --> not mandatory and depend on the set above 
+    "hostRootPassword": "Password123", --> not mandatory and depend on the set above 
     "ipType": "Static",
     "ipAddress": "10.171.11.27",
     "subnetMask": "255.255.240.0",
