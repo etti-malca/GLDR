@@ -878,7 +878,6 @@ Body:
             "subnet": "<uuid>",
             "securityGroup": "<uuid>",
             "azureDiskType": "enum",
-            "vmSeries": "string",
             "vmInstance": "string",
         }
         "testSettings": {
@@ -886,7 +885,6 @@ Body:
             "subnet": "<uuid>",
             "securityGroup": "<uuid>",
             "azureDiskType": "enum",
-            "vmSeries": "string",
             "vmInstance": "string"
         }
     }
