@@ -606,6 +606,22 @@ Body:
     "network":"{{NetworkIdentifier}}",
     "testNetwork":"{{NetworkIdentifier}}"
     },
+    "recoveryAzure": {
+        "settings": {
+            "virtualnetwork": "<uuid>",
+            "subnet": "<uuid>",
+            "securityGroup": "<uuid>",
+            "azureDiskType": "enum",
+            "vmInstance": "string",
+        },
+        "testSettings": {
+            "virtualnetwork": "<uuid>",
+            "subnet": "<uuid>",
+            "securityGroup": "<uuid>",
+            "azureDiskType": "enum",
+            "vmInstance": "string"
+        }
+    }
   "protectedEntities":{
     "items":[ 
       {         
@@ -681,6 +697,24 @@ Response:
                 "network": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f",
                 "testNetwork": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f"
             },
+            "recoveryAzure": {
+                "settings": {
+                    "virtualnetwork": "<uuid>",
+                    "subnet": "<uuid>",
+                    "securityGroup": "<uuid>",
+                    "azureDiskType": "enum",
+                    "vmSeries": "string",
+                    "vmInstance": "string",
+                }
+                "testSettings": {
+                    "virtualnetwork": "<uuid>",
+                    "subnet": "<uuid>",
+                    "securityGroup": "<uuid>",
+                    "azureDiskType": "enum",
+                    "vmSeries": "string",
+                    "vmInstance": "string"
+                }
+            }
             "protectedEntities":{
                 "entityType":"VCENTER",
                 "items": [
@@ -756,6 +790,24 @@ Response:
         "network": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f",
         "testNetwork": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f"
     },
+    "recoveryAzure": {
+        "settings": {
+            "virtualnetwork": "<uuid>",
+            "subnet": "<uuid>",
+            "securityGroup": "<uuid>",
+            "azureDiskType": "enum",
+            "vmSeries": "string",
+            "vmInstance": "string",
+        }
+        "testSettings": {
+            "virtualnetwork": "<uuid>",
+            "subnet": "<uuid>",
+            "securityGroup": "<uuid>",
+            "azureDiskType": "enum",
+            "vmSeries": "string",
+            "vmInstance": "string"
+        }
+    }
     "protectedEntities":{
         "entityType":"VCENTER",
         "items": [
@@ -820,6 +872,24 @@ Body:
         "network":"{{tmp_vpg_network}}",
         "testNetwork":"{{tmp_vpg_testNetwork}}"
     },
+    "recoveryAzure": {
+        "settings": {
+            "virtualnetwork": "<uuid>",
+            "subnet": "<uuid>",
+            "securityGroup": "<uuid>",
+            "azureDiskType": "enum",
+            "vmSeries": "string",
+            "vmInstance": "string",
+        }
+        "testSettings": {
+            "virtualnetwork": "<uuid>",
+            "subnet": "<uuid>",
+            "securityGroup": "<uuid>",
+            "azureDiskType": "enum",
+            "vmSeries": "string",
+            "vmInstance": "string"
+        }
+    }
     "protectedEntities":{
         "items":[
             {
