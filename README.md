@@ -597,6 +597,11 @@ Body:
   "name":"PM_DEMO_LIOR10",
   "protectedSite": "{{ProtectedSiteIdentifier}}",
   "recoverySite": "{{RecoverySiteIdentifier}}",
+  "history": {
+                "configuredDays": 0,
+                "unlimited": true,
+                "configuredMaxSizeGb":"0"
+            },
   "recoveryVcenter":{ 
     "host":"{{HostIdentifier}}",
     "cluster":"{{ClusterIdenitifier}}",
@@ -677,87 +682,77 @@ Response:
 {
     "items": [
         {
-            "id": "ea8b7d07-10f3-49cf-84a8-7d6f81f940b5",
-            "status": "ready",
-            "name": "vpg-4b99425",
+            "id": "de6e12e3-696b-4375-8787-3e5b6b7b5038",
+            "status": "READY",
+            "name": "4cluster",
             "protectedSite": {
-                "id": "cfa2cc63-e43b-4f6e-82fb-b6737fce029b",
-                "name": "accusamus"
+                "id": "b036184b-8b90-4b0d-b05f-7128f724ef3e",
+                "name": "MK ZVML4"
             },
             "recoverySite": {
-                "id": "cfa2cc63-e43b-4f6e-82fb-b6737fce029b",
-                "name": "accusamus"
+                "id": "b036184b-8b90-4b0d-b05f-7128f724ef3e",
+                "name": "MK ZVML4"
+            },
+            "history": {
+                    "configuredDays": 0,
+                    "unlimited": true,
+                    "configuredMaxSizeGb": 0
             },
             "recoveryVcenter": {
-                "host": "5ecdbc67-0bd9-321f-8cc6-03fb2c2da6b7",
-                "datastore": "be556441-a07f-3ad0-998f-4288a2f09ec2",
+                "host": "8f9e3662-3d78-338a-b9b0-6a5d1e445a83",
+                "datastore": "7a62201b-a7fe-3817-8a47-af390e7dfe69",
                 "cluster": "",
                 "datastoreCluster": "",
-                "folder": "a4a37624-f274-30a2-b1e0-16e76e758ad9",
-                "network": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f",
-                "testNetwork": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f"
-            },
-            "recoveryAzure": {
-                "settings": {
-                    "virtualnetwork": "<uuid>",
-                    "subnet": "<uuid>",
-                    "securityGroup": "<uuid>",
-                    "azureDiskType": "enum",
-                    "vmSeries": "string",
-                    "vmInstance": "string",
-                }
-                "testSettings": {
-                    "virtualnetwork": "<uuid>",
-                    "subnet": "<uuid>",
-                    "securityGroup": "<uuid>",
-                    "azureDiskType": "enum",
-                    "vmSeries": "string",
-                    "vmInstance": "string"
-                }
+                "folder": "fb07de53-eb63-318a-8345-99640f74a6b5",
+                "network": "d81a880b-ac06-3689-9565-5440040d5378",
+                "testNetwork": "d81a880b-ac06-3689-9565-5440040d5378" ,
+                 "nicOverrides": [
+                  {
+                    "name": "<string>",
+                    "vmIdentifier": "string",
+                    "failover": {
+                      "ipConfig": {
+                        "staticIp": "<string>",
+                        "isDhcp": "<bool>",
+                        "subnetMask": "<string>",
+                        "gateway": "<string>",
+                        "primaryDns": "<string>",
+                        "secondaryDns": "<string>",
+                        "dnsSuffix": "<string>"
+                      },
+                      "networkId": "<uuid>",
+                      "shouldReplaceMacAddress": "<bool>"
+                    },
+                    "test": {
+                      "ipConfig": {
+                        "staticIp": "<string>",
+                        "isDhcp": "<bool>",
+                        "subnetMask": "<string>",
+                        "gateway": "<string>",
+                        "primaryDns": "<string>",
+                        "secondaryDns": "<string>",
+                        "dnsSuffix": "<string>"
+                      },
+                      "networkId": "<uuid>",
+                      "shouldReplaceMacAddress": "<bool>"
+                    }
+                  }
+                ]
             }
-            "protectedEntities":{
-                "entityType":"VCENTER",
+            "protectedEntities": {
                 "items": [
-                    {
-                    "id": "1216926d-410e-5fde-a3e6-1076aafde55e",
-                     "networkAdapters": [
-                        {
-                            "id": "<string>",
-                            "failover": {
-                                "network": "",
-                                "staticIP": "",
-                                "shouldReplaceMacAddress": "false",
-                                "isDhcp": "true",
-                                "subnetMask": "",
-                                "gateway": "",
-                                "primaryDNS": "",
-                                "secondaryDNS": "",
-                                "dnsSuffix": ""
-                            },
-                            "test": {
-                                "network": "<uuid>",
-                                "staticIP": "<string>",
-                                "shouldReplaceMacAddress": "false",
-                                "isDhcp": "true",
-                                "subnetMask": "<string>",
-                                "gateway": "<string>",
-                                "primaryDNS": "<string>",
-                                "secondaryDNS": "<string>",
-                                "dnsSuffix": "<string>"
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-           
+                   {
+                    "id": "e31b6c64-4224-5c98-a94f-a6b580e10eaf"
+                   }
+                 ]
+            }
             "type": "virtual-continuous-protection-group",
-            "resourceUri": "/api/v1/virtual-continuous-protection-groups/95d4e310-39a1-11ed-8051-56e786f00957",
-            "customerId": "95d4e310-39a1-11ed-8051-56e786f00957",
-            "generation": 2,
-            "updatedAt": "2023-03-13T08:11:21.489807Z",
-            "createdAt": "2023-03-13T08:11:21.489807Z"
-        }
+            "resourceUri": "/disaster-recovery/v1beta1/virtual-continuous-protection-groups/de6e12e3-696b-4375-8787-3e5b6b7b5038",
+            "customerId": "8e2e3348-c176-11ed-8dc9-9a78dd92b82f",
+            "generation": 14,
+            "updatedAt": "2023-09-06T04:38:03.475607Z",
+            "createdAt": "2023-09-05T15:32:33.770914Z"
+        },
     ],
     "limit": 20000,
     "offset": 0,
@@ -781,6 +776,19 @@ Response:
         "id": "cfa2cc63-e43b-4f6e-82fb-b6737fce029b",
         "name": "accusamus"
     },
+    "history": {
+         "configuredDays": 0,
+         "unlimited": true,
+         "configuredMaxSizeGb": 0
+    },
+    "protectedEntities": {
+    "entityType": "CSP/VCENTER",
+    "items": [
+        {
+            "id": "uuid"
+        }
+      ]
+    },
     "recoveryVcenter": {
         "host": "5ecdbc67-0bd9-321f-8cc6-03fb2c2da6b7",
         "datastore": "be556441-a07f-3ad0-998f-4288a2f09ec2",
@@ -788,7 +796,39 @@ Response:
         "datastoreCluster": "",
         "folder": "a4a37624-f274-30a2-b1e0-16e76e758ad9",
         "network": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f",
-        "testNetwork": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f"
+        "testNetwork": "e3965e6a-9c8f-3c6e-81ae-543bfe8d0e8f",
+        "nicOverrides": [
+          {
+            "name": "<string>",
+            "vmIdentifier": "string",
+            "failover": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            },
+            "test": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            }
+          }
+        ]
     },
     "recoveryAzure": {
         "settings": {
@@ -806,45 +846,42 @@ Response:
             "azureDiskType": "enum",
             "vmSeries": "string",
             "vmInstance": "string"
-        }
-    }
-    "protectedEntities":{
-        "entityType":"VCENTER",
-        "items": [
-            {
-            "id": "1216926d-410e-5fde-a3e6-1076aafde55e"
-            "networkAdapters": [
-                        {
-                            "id": "<string>",
-                            "failover": {
-                                "networkID": "",
-                                "staticIP": "",
-                                "shouldReplaceMacAddress": "false",
-                                "isDhcp": "true",
-                                "subnetMask": "",
-                                "getway": "",
-                                "primaryDNS": "",
-                                "secondaryDNS": "",
-                                "dnsSuffix": ""
-                            },
-                            "test": {
-                                "networkID": "<uuid>",
-                                "staticIP": "<string>",
-                                "shouldReplaceMacAddress": "false",
-                                "isDhcp": "true",
-                                "subnetMask": "<string>",
-                                "getway": "<string>",
-                                "primaryDNS": "<string>",
-                                "secondaryDNS": "<string>",
-                                "dnsSuffix": "<string>"
-                            }
-                        }
-                    ]
-                }
-            ]
         },
+      "nicOverrides": [
+        {
+          "name": "<string>",
+          "vmIdentifier": "string",
+          "failover": {
+            "ipConfig": {
+              "staticIp": "<string>",
+              "isDhcp": "<bool>",
+              "subnetMask": "<string>",
+              "gateway": "<string>",
+              "primaryDns": "<string>",
+              "secondaryDns": "<string>",
+              "dnsSuffix": "<string>"
+            },
+            "networkId": "<uuid>",
+            "shouldReplaceMacAddress": "<bool>"
+          },
+          "test": {
+            "ipConfig": {
+              "staticIp": "<string>",
+              "isDhcp": "<bool>",
+              "subnetMask": "<string>",
+              "gateway": "<string>",
+              "primaryDns": "<string>",
+              "secondaryDns": "<string>",
+              "dnsSuffix": "<string>"
+            },
+            "networkId": "<uuid>",
+            "shouldReplaceMacAddress": "<bool>"
+          }
+        }
+      ]
+    }
     "type": "virtual-continuous-protection-group",
-    "resourceUri": "/api/v1/virtual-continuous-protection-groups/95d4e310-39a1-11ed-8051-56e786f00957",
+    "resourceUri": "/disaster-recovery/v1beta1/virtual-continuous-protection-groups/95d4e310-39a1-11ed-8051-56e786f00957",
     "customerId": "95d4e310-39a1-11ed-8051-56e786f00957",
     "generation": 2,
     "updatedAt": "2023-03-13T08:11:21.489807Z",
@@ -863,6 +900,14 @@ Body:
 ```
 {
     "name": "S4EGS3_v1" ,
+    "protectedEntities": {
+    "entityType": "CSP/VCENTER",
+    "items": [
+      {
+        "id": "uuid"
+      }
+    ]
+  },
     "recoveryVcenter":{ 
         "host":"{{tmp_vpg_host}}",
         "cluster":"{{tmp_vpg_cluster}}",
@@ -871,6 +916,38 @@ Body:
         "folder":"{{tmp_vpg_folder}}",
         "network":"{{tmp_vpg_network}}",
         "testNetwork":"{{tmp_vpg_testNetwork}}"
+         "nicOverrides": [
+          {
+            "name": "<string>",
+            "vmIdentifier": "string",
+            "failover": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            },
+            "test": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            }
+          }
+        ]
     },
     "recoveryAzure": {
         "settings": {
@@ -886,46 +963,42 @@ Body:
             "securityGroup": "<uuid>",
             "azureDiskType": "enum",
             "vmInstance": "string"
-        }
+        },
+        "nicOverrides": [
+          {
+            "name": "<string>",
+            "vmIdentifier": "string",
+            "failover": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            },
+            "test": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            }
+          }
+        ]
     }
-    "protectedEntities":{
-        "items":[
-            {
-             "id":"fe68326c-b08f-5516-a82c-e6c56ddd8d60"
-             "networkAdapters": [
-                {
-                    "id": "<string>",
-                    "failover": {
-                         "networkID": "",
-                         "shouldReplaceMacAddress": false,
-                         "ipConfig": {
-                            "staticIP": "",
-                            "isDhcp": true,
-                            "subnetMask": "",
-                            "gateway": "",
-                            "primaryDNS": "",
-                            "secondaryDNS": "",
-                            "dnsSuffix": ""
-                          }
-                    },
-                    "test": {
-                         "networkID": "",
-                         "shouldReplaceMacAddress": false,
-                         "ipConfig": {
-                            "staticIP": "",
-                            "isDhcp": true,
-                            "subnetMask": "",
-                            "gateway": "",
-                            "primaryDNS": "",
-                            "secondaryDNS": "",
-                            "dnsSuffix": ""
-                          }
-                    }
-                }
-            ]
-        }
-    ]
-    }
+   
+    
     
 }
 
@@ -968,11 +1041,11 @@ Response:
                 "status": "OK"
             },
             "history": {
-                "configuredMinutes": 1440,
-                "actualMinutes": 10
+                "actualMinutes": 0,
+                "actualSizeMb":0
             },
             "type": "virtual-continuous-protection-replica",
-            "resourceUri": "/api/v1/virtual-continuous-protection-replicas/a1d7ed4d-8c0d-4876-80cd-dc17ed2569a8",
+            "resourceUri": "/disaster-recovery/v1beta1/virtual-continuous-protection-replicas/a1d7ed4d-8c0d-4876-80cd-dc17ed2569a8",
             "generation": 2,
             "updatedAt": "2023-03-13T07:55:00.69804Z",
             "createdAt": "2023-03-13T07:55:00.413094Z"
@@ -1000,11 +1073,11 @@ Response:
         "status": "OK"
     },
     "history": {
-        "configuredMinutes": 1440,
-        "actualMinutes": 10
+        "actualMinutes": 0,
+        "actualSizeMb": 0
     },
     "type": "virtual-continuous-protection-replica",
-    "resourceUri": "/api/v1/virtual-continuous-protection-replicas/a1d7ed4d-8c0d-4876-80cd-dc17ed2569a8",
+    "resourceUri": "/disaster-recovery/v1beta1/virtual-continuous-protection-replicas/virtual-continuous-protection-replicas/a1d7ed4d-8c0d-4876-80cd-dc17ed2569a8",
     "generation": 2,
     "updatedAt": "2023-03-13T07:55:00.69804Z",
     "createdAt": "2023-03-13T07:55:00.413094Z"
