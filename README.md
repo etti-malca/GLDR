@@ -30,7 +30,7 @@ Response:
     "total": 1
 }
 ```
-#### Gets specific sites information 
+#### Gets specific sites information
 GET {{url}}/disaster-recovery/v1beta1/virtual-sites/{id}
 
 Response:   
@@ -77,10 +77,10 @@ Response:
 #### Delete a site from DSCC
 DELETE /disaster-recovery/v1beta1/virtual-sites/{id}
 
-Response: 
+Response:
 204 No Content
 
-## VIRTUALIZATION 
+## VIRTUALIZATION
 #### Get list of Virtual-machines for a specific Protection site ID (remove everything after the question mark (including) - to get  for all customer sites)
 GET /disaster-recovery/v1alpha1/virtualization/hypervisor-virtual-machines?siteId={siteId}
 
@@ -128,7 +128,7 @@ Response:
     }
 ]
 ```
-#### Protection site ID as param Refresh virtual machines list 
+#### Protection site ID as param Refresh virtual machines list
 POST /disaster-recovery/v1alpha1/virtualization/hypervisor-virtual-machines/refresh
 
 Body:
@@ -137,7 +137,7 @@ Body:
     "siteId":"{{ProtectedSiteIdentifier}}"
 }
 ```
-Response: 
+Response:
 ```
 {
     "taskUri": "/api/v1/tasks/01955825-26e1-4130-aae3-2677d465e577"
@@ -175,7 +175,7 @@ Response:
     }
 ]
 ```
-#### Recovery site ID as param recovery site Refresh Hypervisor-host list 
+#### Recovery site ID as param recovery site Refresh Hypervisor-host list
 POST /disaster-recovery/v1alpha1/virtualization/hypervisor-hosts/refresh
 
 Body:
@@ -257,15 +257,15 @@ Response:
 ]
 ```
 #### Recovery site ID as param recovery site Refresh Hypervisor-cluster list
- POST /disaster-recovery/v1alpha1/virtualization/hypervisor-clusters/refresh
- 
+POST /disaster-recovery/v1alpha1/virtualization/hypervisor-clusters/refresh
+
 Body:
 ```
 {
     "siteId":"{{RecoverySiteIdentifier}}"
 }
 ```
-Response: 
+Response:
 ```
 {
     "taskUri": "/api/v1/tasks/e5d2d1f7-f3c6-44cf-92f1-a2854b40dba7"
@@ -288,7 +288,7 @@ GET /disaster-recovery/v1alpha1/virtualization/hypervisor-datastores?siteId={sit
     }
 ]
 ```
-#### Recovery site ID as param recovery site Refresh hypervisor-datastores list 
+#### Recovery site ID as param recovery site Refresh hypervisor-datastores list
 POST /disaster-recovery/v1alpha1/virtualization/hypervisor-datastores/refresh
 
 Body:
@@ -320,10 +320,10 @@ Response:
     }
 ]
 ```
-#### Recovery site ID as param recovery siteRefresh hypervisor-networks list 
+#### Recovery site ID as param recovery siteRefresh hypervisor-networks list
 POST /disaster-recovery/v1alpha1/virtualization/hypervisor-networks/refresh
 
-Body: 
+Body:
 ```
 {
     "siteId":"{{RecoverySiteIdentifier}}"
@@ -352,7 +352,7 @@ Response:
     }
 ]
 ```
-#### Recovery site ID as param recovery siteRefresh hypervisor-folders list 
+#### Recovery site ID as param recovery siteRefresh hypervisor-folders list
 POST /disaster-recovery/v1alpha1/virtualization/hypervisor-folders/refresh
 
 Bosy:
@@ -384,7 +384,7 @@ Response:
     }
 ]
 ```
-#### Recovery site ID as param recovery siteRefresh hypervisor-datastore-clusters list 
+#### Recovery site ID as param recovery siteRefresh hypervisor-datastore-clusters list
 POST /disaster-recovery/v1alpha1/virtualization/hypervisor-datastore-clusters/refresh
 
 Body:
@@ -445,7 +445,7 @@ Response:
     }
 ]
 ```
-#### Recovery site ID as param recovery siteRefresh csp-machine-instances list 
+#### Recovery site ID as param recovery siteRefresh csp-machine-instances list
 POST /disaster-recovery/v1alpha1/virtualization/csp-machine-instances/refresh
 
 Body:
@@ -476,7 +476,7 @@ Response:
     }
 ]
 ```
-#### Recovery site ID as param recovery siteRefresh csp-security-groups list 
+#### Recovery site ID as param recovery siteRefresh csp-security-groups list
 POST /disaster-recovery/v1alpha1/virtualization/csp-security-groups/refresh
 
 Body:
@@ -509,7 +509,7 @@ Response:
     }
 ]
 ```
-#### Recovery site ID as param recovery siteRefresh csp-subnets list 
+#### Recovery site ID as param recovery siteRefresh csp-subnets list
 POST /disaster-recovery/v1alpha1/virtualization/csp-subnets/refresh
 
 Body:
@@ -540,7 +540,7 @@ Response:
     }
 ]
 ```
-#### Recovery site ID as param recovery siteRefresh csp-vpcs list 
+#### Recovery site ID as param recovery siteRefresh csp-vpcs list
 POST /disaster-recovery/v1alpha1/virtualization/csp-vpcs/refresh
 
 Body:
@@ -572,7 +572,7 @@ Response:
     }
 ]
 ```
-#### Recovery site ID as param recovery siteRefresh csp-machine-instance-types list 
+#### Recovery site ID as param recovery siteRefresh csp-machine-instance-types list
 POST /disaster-recovery/v1alpha1/virtualization/csp-machine-instance-types/refresh
 
 Body:
@@ -609,7 +609,39 @@ Body:
     "datastoreCluster":"{{DatastoreClusterIdentifier}}",
     "folder":"{{FolderIdentifier}}",
     "network":"{{NetworkIdentifier}}",
-    "testNetwork":"{{NetworkIdentifier}}"
+    "testNetwork":"{{NetworkIdentifier}}",
+"nicOverrides": [
+          {
+            "name": "<string>",
+            "vmIdentifier": "string",
+            "failover": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            },
+            "test": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            }
+          }
+        ],
     },
     "recoveryAzure": {
         "settings": {
@@ -625,46 +657,47 @@ Body:
             "securityGroup": "<uuid>",
             "azureDiskType": "enum",
             "vmInstance": "string"
-        }
+        },
+        "nicOverrides": [
+          {
+            "name": "<string>",
+            "vmIdentifier": "string",
+            "failover": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            },
+            "test": {
+              "ipConfig": {
+                "staticIp": "<string>",
+                "isDhcp": "<bool>",
+                "subnetMask": "<string>",
+                "gateway": "<string>",
+                "primaryDns": "<string>",
+                "secondaryDns": "<string>",
+                "dnsSuffix": "<string>"
+              },
+              "networkId": "<uuid>",
+              "shouldReplaceMacAddress": "<bool>"
+            }
+          }
+        ]
     }
-  "protectedEntities":{
-    "items":[ 
-      {         
-         "id":"{{VmIdentifier}}",
-         "networkAdapters": [
-                {
-                    "id": "<string>",
-                    "failover": {
-                         "networkID": "",
-                         "shouldReplaceMacAddress": false,
-                         "ipConfig": {
-                            "staticIP": "",
-                            "isDhcp": true,
-                            "subnetMask": "",
-                            "gateway": "",
-                            "primaryDNS": "",
-                            "secondaryDNS": "",
-                            "dnsSuffix": ""
-                          }
-                    },
-                    "test": {
-                         "networkID": "",
-                         "shouldReplaceMacAddress": false,
-                         "ipConfig": {
-                            "staticIP": "",
-                            "isDhcp": true,
-                            "subnetMask": "",
-                            "gateway": "",
-                            "primaryDNS": "",
-                            "secondaryDNS": "",
-                            "dnsSuffix": ""
-                          }
-                    }
-                }
-            ]
-      }
-   ]
-}
+   "protectedEntities": {
+                "items": [
+                   {
+                    "id": "e31b6c64-4224-5c98-a94f-a6b580e10eaf"
+                   }
+                 ]
+    }
 
 }
 ```
@@ -740,6 +773,7 @@ Response:
                 ]
             }
             "protectedEntities": {
+                "entityType": "CSP/VCENTER",
                 "items": [
                    {
                     "id": "e31b6c64-4224-5c98-a94f-a6b580e10eaf"
@@ -901,13 +935,17 @@ Body:
 {
     "name": "S4EGS3_v1" ,
     "protectedEntities": {
-    "entityType": "CSP/VCENTER",
     "items": [
       {
         "id": "uuid"
       }
     ]
   },
+      "history": {
+        "configuredDays": 0,
+        "unlimited": true,
+        "configuredMaxSizeGb": 0
+    },
     "recoveryVcenter":{ 
         "host":"{{tmp_vpg_host}}",
         "cluster":"{{tmp_vpg_cluster}}",
@@ -1011,7 +1049,7 @@ Response:
 }
 ```
 
-#### Delete a protection group 
+#### Delete a protection group
 DELETE /disaster-recovery/v1beta1/virtual-continuous-protection-groups/{{DSCC_VPG_UDID}}
 
 Response:
@@ -1298,7 +1336,7 @@ Response:
     "generation": 1
 }  
 ```
-#### Initiate Failover Live Operation 
+#### Initiate Failover Live Operation
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recovery/{{DSCC_VPG_UDID}}/Failover
 
 Response:
@@ -1307,7 +1345,7 @@ Response:
     "taskUri": "/api/v1/tasks/0ea06a97-41d6-4b68-8eec-fc753de4eae7"
 }
 ```
-#### Initiate Failover Live-Commit  Operation 
+#### Initiate Failover Live-Commit  Operation
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/:DsccVpgId/FailoverCommit
 
 Response:
@@ -1316,7 +1354,7 @@ Response:
     "taskUri": "/api/v1/tasks/0ea06a97-41d6-4b68-8eec-fc753de4eae7"
 }
 ```
-#### Initiate Failover Live-Rollback Operation 
+#### Initiate Failover Live-Rollback Operation
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/:DsccVpgId/FailoverRollback
 
 Response:
@@ -1326,7 +1364,7 @@ Response:
 }
 ```
 #### Initiate Failover Test Operation
- POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/{{VpgId}}/FailoverTest
+POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/{{VpgId}}/FailoverTest
 
 Response:
 ```
@@ -1334,7 +1372,7 @@ Response:
     "taskUri": "/api/v1/tasks/0ea06a97-41d6-4b68-8eec-fc753de4eae7"
 }
 ```
-#### Initiate Failover Test-Stop Operation 
+#### Initiate Failover Test-Stop Operation
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/{{VpgId}}/FailoverTestStop
 
 Response:
@@ -1344,9 +1382,9 @@ Response:
 }
 ```
 ## REPORTS
-#### post 
-POST /disaster-recovery/api/v1/virtual-continuous-protection-reports - with 
-Body : 
+#### post
+POST /disaster-recovery/api/v1/virtual-continuous-protection-reports - with
+Body :
 ```
 {
 
@@ -1366,7 +1404,7 @@ Body :
 
 }
 ```
- 
+
 
 Response : Status 202 Accepted - body :
 ```
@@ -1376,7 +1414,7 @@ Response : Status 202 Accepted - body :
 
 }
 ```
- 
+
 #### Get
 GET /disaster-recovery/api/v1/virtual-continuous-protection-reports
 
@@ -1397,7 +1435,7 @@ Response : status 200 OK - body :
 ]
 
 ```
-#### Get 
+#### Get
 GET /disaster-recovery/api/v1/virtual-continuous-protection-reports/:repID
 
 Response:
@@ -1496,7 +1534,7 @@ Response:
 #### Deploy VRA (Host)
 POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}/deploy
 
-Body: 
+Body:
 ```
 {
     "network": "c65d935a-9a6c-335e-a01a-48f55012701e",
@@ -1509,7 +1547,7 @@ Body:
     "defaultGateway": "10.171.15.254"
 }
 ```
-Response: 
+Response:
 ```
 {
     "taskUri": "/api/v1/tasks/27126c1a-4fc9-4f6b-9a67-373567f70e73"
@@ -1534,7 +1572,7 @@ Body:
     "setAsDefaultConfiguration": "bool"
 }
 ```
-Response: 
+Response:
 ```
 {
     "taskUri": "/api/v1/tasks/1d58c8ab-a318-4591-9b48-b8909c2dff7d"
@@ -1544,7 +1582,7 @@ Response:
 #### Edit VRA (Host)
 PUT /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}
 
-Body: 
+Body:
 ```
 {
     "setHostPassword": "bool",
@@ -1556,7 +1594,7 @@ Body:
 }
 ```
 
-Response: 
+Response:
 ```
 {
     "taskUri": "/api/v1/tasks/e63b3f81-5ada-40b5-82ad-420af30715ed"
@@ -1567,7 +1605,7 @@ Response:
 #### Delete VRA (Host)
 POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}/remove
 
-Response: 
+Response:
 ```
 {
     "taskUri": "/api/v1/tasks/5d3c8ed0-e8cb-406a-996f-0518493edc2e"
@@ -1577,7 +1615,7 @@ Response:
 #### Delete VRA (Cluster)
 POST /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/{clusterID}/remove
 
-Response: 
+Response:
 ```
 {
     "taskUri": "/api/v1/tasks/4c538768-86b2-4196-8352-06f1bf06edf6"
@@ -1587,7 +1625,7 @@ Response:
 #### Upgrade VRA (Host)
 POST /disaster-recovery/v1beta1/virtual-continuous-host-protectors/{hostID}/upgrade
 
-Response: 
+Response:
 ```
 {
     "taskUri": "/api/v1/tasks/040eee1f-7930-445a-916a-d484a249fbea"
@@ -1597,7 +1635,7 @@ Response:
 #### Upgrade VRA (Cluster)
 POST /disaster-recovery/v1beta1/virtual-continuous-cluster-protectors/{clusterID}/upgrade
 
-Response: 
+Response:
 ```
 {
     "taskUri": "/api/v1/tasks/52a54a16-e748-4f84-b4c6-62afca249447"
