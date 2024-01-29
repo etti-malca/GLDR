@@ -1478,7 +1478,7 @@ Response:
                 "subnetMask": "255.255.240.0",
                 "defaultGateway": "10.171.47.254",
                 "memoryInGb": 3,
-                "numOfVCpus": 1,
+                "numOfVCpus": 1
             },
             "createdAt": "2023-11-09T10:32:30.441178Z",
             "updatedAt": "2023-11-09T10:32:36.241597Z",
@@ -1519,7 +1519,7 @@ Response:
                 "subnetMask": "255.255.240.0",
                 "defaultGateway": "1.1.1.254",
                 "memoryInGb": 3,
-                "numOfVCpus": 1,
+                "numOfVCpus": 1
             },
             "createdAt": "2023-12-05T12:11:32.280046Z",
             "updatedAt": "2023-12-05T12:15:39.504083Z",
