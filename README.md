@@ -1476,7 +1476,9 @@ Response:
                 "ipType": "Static",
                 "ipAddress": "10.171.39.14",
                 "subnetMask": "255.255.240.0",
-                "defaultGateway": "10.171.47.254"
+                "defaultGateway": "10.171.47.254",
+                "memoryInGb": 3,
+                "numOfVCpus": 1,
             },
             "createdAt": "2023-11-09T10:32:30.441178Z",
             "updatedAt": "2023-11-09T10:32:36.241597Z",
@@ -1515,7 +1517,9 @@ Response:
                 "ipRangeStart": "1.1.1.1",
                 "ipRangeEnd": "1.1.1.3",
                 "subnetMask": "255.255.240.0",
-                "defaultGateway": "1.1.1.254"
+                "defaultGateway": "1.1.1.254",
+                "memoryInGb": 3,
+                "numOfVCpus": 1,
             },
             "createdAt": "2023-12-05T12:11:32.280046Z",
             "updatedAt": "2023-12-05T12:15:39.504083Z",
@@ -1544,7 +1548,9 @@ Body:
     "ipType": "Static",
     "ipAddress": "10.171.11.27",
     "subnetMask": "255.255.240.0",
-    "defaultGateway": "10.171.15.254"
+    "defaultGateway": "10.171.15.254",
+    "memoryInGb": 3,
+    "numOfVCpus": 1
 }
 ```
 Response:
@@ -1569,7 +1575,9 @@ Body:
     "ipRangeEnd": "string",
     "subnetMask": "string",
     "defaultGateway": "string",
-    "setAsDefaultConfiguration": "bool"
+    "setAsDefaultConfiguration": "bool",
+    "memoryInGb": 3,
+    "numOfVCpus": 1
 }
 ```
 Response:
@@ -1587,10 +1595,12 @@ Body:
 {
     "setHostPassword": "bool",
     "hostRootPassword": "string",
-    "ipType": "string",--> Static
+    "ipType": "string",--> Static,
     "ipAddress": "string",
-    "subnetMask": "string"
-    "defaultGateway": "string"
+    "subnetMask": "string",
+    "defaultGateway": "string",
+    "memoryInGb": 3,
+    "numOfVCpus": 1
 }
 ```
 
