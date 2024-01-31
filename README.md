@@ -663,30 +663,16 @@ Body:
             "name": "<string>",
             "vmIdentifier": "string",
             "failover": {
-              "ipConfig": {
-                "staticIp": "<string>",
-                "isDhcp": "<bool>",
-                "subnetMask": "<string>",
-                "gateway": "<string>",
-                "primaryDns": "<string>",
-                "secondaryDns": "<string>",
-                "dnsSuffix": "<string>"
-              },
-              "networkId": "<uuid>",
-              "shouldReplaceMacAddress": "<bool>"
+                "subnet": "<string>",
+                "securityGroup": "<string>",
+                "isPrimary": "<bool>",
+                "ipAddress": "<string>",
             },
             "test": {
-              "ipConfig": {
-                "staticIp": "<string>",
-                "isDhcp": "<bool>",
-                "subnetMask": "<string>",
-                "gateway": "<string>",
-                "primaryDns": "<string>",
-                "secondaryDns": "<string>",
-                "dnsSuffix": "<string>"
-              },
-              "networkId": "<uuid>",
-              "shouldReplaceMacAddress": "<bool>"
+                "subnet": "<string>",
+                "securityGroup": "<string>",
+                "isPrimary": "<bool>",
+                "ipAddress": "<string>",
             }
           }
         ]
@@ -883,34 +869,20 @@ Response:
         },
       "nicOverrides": [
         {
-          "name": "<string>",
-          "vmIdentifier": "string",
-          "failover": {
-            "ipConfig": {
-              "staticIp": "<string>",
-              "isDhcp": "<bool>",
-              "subnetMask": "<string>",
-              "gateway": "<string>",
-              "primaryDns": "<string>",
-              "secondaryDns": "<string>",
-              "dnsSuffix": "<string>"
+            "name": "<string>",
+            "vmIdentifier": "string",
+            "failover": {
+                "subnet": "<string>",
+                "securityGroup": "<string>",
+                "isPrimary": "<bool>",
+                "ipAddress": "<string>",
             },
-            "networkId": "<uuid>",
-            "shouldReplaceMacAddress": "<bool>"
-          },
-          "test": {
-            "ipConfig": {
-              "staticIp": "<string>",
-              "isDhcp": "<bool>",
-              "subnetMask": "<string>",
-              "gateway": "<string>",
-              "primaryDns": "<string>",
-              "secondaryDns": "<string>",
-              "dnsSuffix": "<string>"
-            },
-            "networkId": "<uuid>",
-            "shouldReplaceMacAddress": "<bool>"
-          }
+            "test": {
+                "subnet": "<string>",
+                "securityGroup": "<string>",
+                "isPrimary": "<bool>",
+                "ipAddress": "<string>",
+            }
         }
       ]
     }
@@ -1007,30 +979,16 @@ Body:
             "name": "<string>",
             "vmIdentifier": "string",
             "failover": {
-              "ipConfig": {
-                "staticIp": "<string>",
-                "isDhcp": "<bool>",
-                "subnetMask": "<string>",
-                "gateway": "<string>",
-                "primaryDns": "<string>",
-                "secondaryDns": "<string>",
-                "dnsSuffix": "<string>"
-              },
-              "networkId": "<uuid>",
-              "shouldReplaceMacAddress": "<bool>"
+                "subnet": "<string>",
+                "securityGroup": "<string>",
+                "isPrimary": "<bool>",
+                "ipAddress": "<string>",
             },
             "test": {
-              "ipConfig": {
-                "staticIp": "<string>",
-                "isDhcp": "<bool>",
-                "subnetMask": "<string>",
-                "gateway": "<string>",
-                "primaryDns": "<string>",
-                "secondaryDns": "<string>",
-                "dnsSuffix": "<string>"
-              },
-              "networkId": "<uuid>",
-              "shouldReplaceMacAddress": "<bool>"
+                "subnet": "<string>",
+                "securityGroup": "<string>",
+                "isPrimary": "<bool>",
+                "ipAddress": "<string>",
             }
           }
         ]
