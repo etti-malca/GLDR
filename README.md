@@ -1297,6 +1297,14 @@ Response:
 #### Initiate Failover Live Operation
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recovery/{{DSCC_VPG_UDID}}/Failover
 
+Body:
+```
+{
+    "checkpointIdentifier": "45d7324d-b880-41e8-8247-fc68efcdb752",
+    "isReverseSetting": false
+}
+```
+
 Response:
 ```
 {
@@ -1323,6 +1331,13 @@ Response:
 ```
 #### Initiate Failover Test Operation
 POST /disaster-recovery/v1beta1/virtual-continuous-protection-recoveries/{{VpgId}}/FailoverTest
+
+Body:
+```
+{
+    "checkpointIdentifier": "45d7324d-b880-41e8-8247-fc68efcdb752"
+}
+```
 
 Response:
 ```
