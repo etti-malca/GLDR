@@ -1301,7 +1301,7 @@ Body:
 ```
 {
     "checkpointIdentifier": "45d7324d-b880-41e8-8247-fc68efcdb752",
-    "isReverseSetting": false
+    "isReverseSettings": false
 }
 ```
 
