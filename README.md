@@ -1230,8 +1230,10 @@ Response:
             "updatedAt": "2023-07-24T10:39:09.141799Z",
 
             "generation": 1,
-
-            "lastTestedAt": ""
+            "lastTestedAt": "",
+            "recoveryArguments": {
+                "isReverseSettings": false
+             }
 
         }
 
@@ -1291,7 +1293,11 @@ Response:
     "resourceUri": "/api/v1/virtual-continuous-protection-recoveries/ea8b7d07-10f3-49cf-84a8-7d6f81f940b5",
     "createdAt": "2023-03-13T08:11:40.975818Z",
     "updatedAt": "2023-03-13T08:11:40.975818Z",
-    "generation": 1
+    "generation": 1,
+    "lastTestedAt": "",
+     "recoveryArguments": {
+        "isReverseSettings": false
+ }
 }  
 ```
 #### Initiate Failover Live Operation
