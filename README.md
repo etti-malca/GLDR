@@ -98,18 +98,18 @@ Response:
         "isAgentInstalled": false,
         "protected": false,
         "hostInfo":{
-		        "name":"string",
-		        "id":"string"
+		"name":"string",
+		"id":"string"
 			},
         "vmPerfMetricInfo": 
             {
                 "provisionedStorageInMB": 0,
-		        "usedStorageInMB": 0,
-		        "numCpuCores":"integer",
+		"usedStorageInMB": 0,
+		"numCpuCores":"integer",
                 "memorySizeInMB":"integer",
-		        "ioPs": 0,
-        	    "averageIops":0,
-		        "throughputInMB": 0,
+		"ioPs": 0,
+        	"averageIops":0,
+		"throughputInMB": 0,
     	     	"averagethroughputInMB":0
             },
         "virtualDisks": [
@@ -432,9 +432,9 @@ Response:
         "vmPerfMetricInfo": 
             {
                "provisionedStorageInMB": 0,
-				"usedStorageInMB": 0,
-				"numCpuCores":"integer",
-        		"memorySizeInMB":"integer",
+		"usedStorageInMB": 0,
+		"numCpuCores":"integer",
+		"memorySizeInMB":"integer",
             },
         "virtualDisks": [
             {
