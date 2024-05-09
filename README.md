@@ -97,10 +97,11 @@ Response:
         "siteId": "0e930aa7-3b47-4da2-825b-cde9e08383f4",
         "isAgentInstalled": false,
         "protected": false,
-        "hostInfo":{
+        "hostInfo":
+	    {
 		"name":"string",
 		"id":"string"
-			},
+	    },
         "vmPerfMetricInfo": 
             {
                 "provisionedStorageInMB": 0,
