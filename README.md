@@ -97,6 +97,21 @@ Response:
         "siteId": "0e930aa7-3b47-4da2-825b-cde9e08383f4",
         "isAgentInstalled": false,
         "protected": false,
+        "hostInfo":{
+		        "name":"string",
+		        "id":"string"
+			},
+        "vmPerfMetricInfo": 
+            {
+                "provisionedStorageInMB": 0,
+		        "usedStorageInMB": 0,
+		        "numCpuCores":"integer",
+                "memorySizeInMB":"integer",
+		        "ioPs": 0,
+        	    "averageIops":0,
+		        "throughputInMB": 0,
+    	     	"averagethroughputInMB":0
+            },
         "virtualDisks": [
             {
                 "id": "",
@@ -414,6 +429,13 @@ Response:
         "cspId": "0c363daf-b9fd-4647-b99e-50332d1a5ba6.vm-1230",
         "isAgentInstalled": false,
         "protected": false,
+        "vmPerfMetricInfo": 
+            {
+               "provisionedStorageInMB": 0,
+				"usedStorageInMB": 0,
+				"numCpuCores":"integer",
+        		"memorySizeInMB":"integer",
+            },
         "virtualDisks": [
             {
                 "id": "",
